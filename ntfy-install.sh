@@ -13,6 +13,13 @@ catch_errors
 setting_up_container
 update_os
 
+# Installing Dependencies
+msg_info "Installing Dependencies"
+$STD apt-get install -y curl
+$STD apt-get install -y sudo
+$STD apt-get install -y mc
+msg_ok "Installed Dependencies"
+
 # Set container name
 msg_info "Setting container name"
 read -p "Enter container name: " CONTAINER_NAME
